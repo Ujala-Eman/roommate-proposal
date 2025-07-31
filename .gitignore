@@ -1,0 +1,5 @@
+# VS Code / Visual Studio
+.vscode/
+
+# Windows
+desktop.ini
