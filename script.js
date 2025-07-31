@@ -104,7 +104,7 @@ function showPage(page) {
 }
 
 function confetti() {
-  container.innerHTML = '<h2>🎉 Woohoo! You got the best roomate! 🎉<br>Ye tha mera faltu ka timepass, Thankyou for being interested! lol</h2>';
+  container.innerHTML = '<h2>🎉 Woohoo! You got the best roomate! 🎉<br>This was my silly little project, Thankyou for being interested! lol</h2>';
   makeConfetti(1000);
 }
 
