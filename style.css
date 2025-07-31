@@ -1,0 +1,354 @@
+/* GENERAL STYLES */
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  background: url('image.png') center center/cover no-repeat fixed;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow-x: hidden;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.25);
+  z-index: 0;
+  pointer-events: none;
+  backdrop-filter: blur(2px);
+}
+
+#container {
+  position: relative;
+  background: rgba(255, 255, 255, 0.75);
+  padding: 40px 30px;
+  border-radius: 28px;
+  max-width: 350px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.15);
+  z-index: 1;
+  animation: bounceIn 1s;
+  transition: background 0.6s, box-shadow 0.4s;
+}
+
+h2,
+.cute {
+  color: #403264;
+  margin-bottom: 16px;
+  text-shadow: 1px 1px 2px #fff, 0 1px 20px #f7d9d9;
+  transition: color 0.4s;
+}
+
+.btn {
+  background: linear-gradient(90deg, #ffb7b2 70%, #e9c46a 100%);
+  border: none;
+  border-radius: 24px;
+  color: #fff;
+  font-size: 1.05rem;
+  padding: 12px 28px;
+  margin: 10px 8px;
+  cursor: pointer;
+  box-shadow: 0 2px 10px rgba(249, 168, 212, 0.18);
+  transition: transform 0.2s, background 0.5s;
+  outline: none;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn:hover {
+  background: linear-gradient(90deg, #e9c46a 10%, #ffb7b2 100%);
+  transform: scale(1.04) rotate(-2deg);
+  color: #fff1ed;
+  transition: 0.2s;
+  box-shadow: 0 8px 24px rgba(249, 168, 212, 0.28);
+}
+
+/* Style No buttons differently for emphasis */
+.btn.no {
+  background: #f28ab2;
+  color: #fff;
+  box-shadow: 0 2px 10px rgba(242, 138, 178, 0.5);
+}
+
+.btn.no:hover {
+  background: #d8326f;
+  transform: scale(1.05);
+  box-shadow: 0 6px 18px rgba(216, 50, 111, 0.8);
+}
+
+@keyframes bounceIn {
+  0% {
+    transform: scale(0.9) translateY(30px);
+    opacity: 0;
+  }
+  60% {
+    transform: scale(1.04) translateY(-8px);
+  }
+  100% {
+    transform: scale(1) translateY(0);
+    opacity: 1;
+  }
+}
+
+/* CONFETTI STYLES */
+
+
+.confetti {
+  position: absolute;
+  width: 10px;
+  height: 12px;
+  background-color: #fbc2eb;
+  opacity: 0.7;
+  border-radius: 50%;
+  z-index: 40;
+  animation: fall 4s ease-in forwards;
+}
+
+@keyframes fall {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+  100% {
+    transform: translateY(120vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+/* CRYING BUNNY STYLES */
+
+.crying-bunny-container {
+  position: relative;
+  width: 180px;
+  height: 210px;
+  margin: 0 auto 16px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 20;
+}
+
+.bunny-ear {
+  position: absolute;
+  width: 43px;
+  height: 85px;
+  background: #fceaec;
+  border-radius: 50% 60% 80% 80% / 100% 100% 60% 70%;
+  border: 3px solid #e1a7b5;
+  top: -40px;
+  z-index: 1;
+}
+
+.ear-left {
+  left: 8px;
+  transform: rotate(-13deg);
+}
+
+.ear-right {
+  right: 8px;
+  left: auto;
+  transform: rotate(13deg);
+}
+
+.bunny-face {
+  position: relative;
+  width: 118px;
+  height: 120px;
+  background: #fff8f9;
+  border-radius: 100px 100px 90px 90px / 100px 100px 80px 75px;
+  box-shadow: 0 8px 30px 0 #ffe2ec70, 0 6px 0 0 #e1a7b540 inset;
+  margin-top: 22px;
+  z-index: 2;
+}
+
+.bunny-eye {
+  position: absolute;
+  width: 22px;
+  height: 23px;
+  background: #3e3857;
+  border-radius: 60%;
+  top: 44px;
+}
+
+.bunny-eye-left {
+  left: 16px;
+}
+
+.bunny-eye-right {
+  right: 16px;
+}
+
+.bunny-tear-stream {
+  position: absolute;
+  top: 22px;
+  left: 9px;
+  width: 7px;
+  height: 48px;
+  background: linear-gradient(180deg, #72c9f0 10%, #44c7f2 90%);
+  border-radius: 10px;
+  filter: drop-shadow(0 0 8px #add8f6);
+  animation: bunny-tear-shimmer 1.8s infinite;
+  opacity: 0.67;
+}
+
+@keyframes bunny-tear-shimmer {
+  0%,
+  100% {
+    filter: drop-shadow(0 1px 8px #aef);
+    opacity: 0.6;
+  }
+  50% {
+    filter: drop-shadow(0 3px 14px #6fdfff);
+    opacity: 0.8;
+  }
+}
+
+.bunny-nose {
+  position: absolute;
+  top: 83px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 14px;
+  height: 12px;
+  background: #e694ae;
+  border-radius: 60% 60% 70% 70%;
+  border: 2px solid #e1a7b5;
+}
+
+.bunny-mouth.sad-bunny-mouth {
+  position: absolute;
+  top: 102px;
+  left: 50%;
+  width: 28px;
+  height: 13px;
+  border-radius: 14px 14px 0 0;
+  border-top: 3px solid #efa2c4;
+  border-bottom: none;
+  transform: translateX(-50%);
+}
+
+.bunny-cheek {
+  position: absolute;
+  width: 18px;
+  height: 11px;
+  background: #fcccec;
+  border-radius: 70% 50% 70% 70%;
+  top: 83px;
+  filter: blur(1px);
+  opacity: 0.5;
+}
+
+.cheek-left {
+  left: 5px;
+}
+
+.cheek-right {
+  right: 5px;
+}
+
+/* WATER FLOOD OVERLAY */
+
+.water-flood {
+  pointer-events: none;
+  position: fixed;
+  bottom: -60vh;
+  left: 0;
+  width: 100%;
+  height: 60vh;
+  background: linear-gradient(180deg, rgba(10, 30, 70, 0.85), rgba(5, 15, 50, 0.95));
+  opacity: 0.85;
+  z-index: 15;
+  animation: floodUp 40s linear forwards;
+  overflow: hidden;
+}
+
+.water-flood::before,
+.water-flood::after {
+  content: "";
+  position: absolute;
+  width: 200%;
+  height: 100%;
+  top: 0;
+  left: 50%;
+  background: radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.15) 10%, transparent 70%);
+  border-radius: 45%;
+  transform: translateX(-50%);
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-name: waveMove;
+  opacity: 0.6;
+  filter: blur(3px);
+  mix-blend-mode: screen;
+}
+
+.water-flood::after {
+  animation-duration: 14s;
+  opacity: 0.4;
+  top: 15%;
+  filter: blur(4px);
+}
+
+@keyframes floodUp {
+  0% {
+    bottom: -60vh;
+  }
+
+  100% {
+    bottom: 0;
+  }
+}
+
+@keyframes waveMove {
+  0% {
+    background-position-x: 0;
+  }
+
+  100% {
+    background-position-x: 800px;
+  }
+}
+
+/* BUBBLES */
+
+.bubble {
+  position: absolute;
+  bottom: 0;
+  width: 8px;
+  height: 8px;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 50%;
+  opacity: 0.7;
+  animation-name: bubbleRise, bubbleFade;
+  animation-duration: 8s, 4s;
+  animation-timing-function: linear, ease-out;
+  animation-iteration-count: infinite;
+  animation-delay: var(--delay);
+  filter: drop-shadow(0 0 2px rgba(255, 255, 255, 0.6));
+  mix-blend-mode: screen;
+}
+
+@keyframes bubbleRise {
+  0% {
+    bottom: 0;
+    transform: translateX(0);
+    opacity: 0.7;
+  }
+
+  100% {
+    bottom: 60vh;
+    transform: translateX(var(--x-move));
+    opacity: 0;
+  }
+}
+
+@keyframes bubbleFade {
+  0% {
+    opacity: 0.7;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
