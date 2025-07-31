@@ -3,7 +3,7 @@
 A simple and fun front-end project built with HTML, CSS, and JavaScript to propose being roommates to a friend.
 ## Live Demo
 
-🚀 **You can view the live project here:** [Add Your Vercel Link Here After You Deploy!]
+🚀 **You can view the live project here:** (https://roommate-proposal.vercel.app/)
 
 ## Description
 
