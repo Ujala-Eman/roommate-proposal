@@ -8,7 +8,7 @@ function showPage(page) {
 
   if (page === 1) {
     container.innerHTML = `
-      <h2>Hello Moona! <br>These vacations don't seem to end and I am bored af. So This is a faltu ka roomate proposal for our new hostel if we get it <br><br>
+      <h2>Hello Buddy! <br>These vacations don't seem to end and I am bored so much. So This is a faltu ka roomate proposal for our new hostel if we get it <br><br>
       So… I am excited now, We can become roomates. Are you excited too??</h2>
       <button class="btn" onclick="showPage(3)">Yes, duh! 😎</button>
       <button class="btn" onclick="showPage(2)">Wait, why tho? 🤔</button>
@@ -55,7 +55,7 @@ function showPage(page) {
      </h2>
       <button class="btn" onclick="confetti()">Omg yessss! 😍🎊</button>
       <button class="btn no" onclick="showPage(99)">No, wait! 😢</button>
-      <h2>Rate this in dm, I am waiting...</h2>
+     
 
     `;
   } else if (page === 7) {
