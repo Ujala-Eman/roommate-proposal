@@ -8,8 +8,8 @@ function showPage(page) {
 
   if (page === 1) {
     container.innerHTML = `
-      <h2>Hello Buddy! <br>These vacations don't seem to end and I am bored so much. So This is a faltu ka roomate proposal for our new hostel if we get it <br><br>
-      So… I am excited now, We can become roomates. Are you excited too??</h2>
+      <h2>Hello Buddy! <br>These vacations don't seem to end and I am bored so much. So This is a silly little roomate proposal for our new hostel if we get it <br><br>
+      So… I am excited, We can become roomates. Are you excited too??</h2>
       <button class="btn" onclick="showPage(3)">Yes, duh! 😎</button>
       <button class="btn" onclick="showPage(2)">Wait, why tho? 🤔</button>
       <button class="btn no" onclick="showPage(99)">No way! 😢</button>
@@ -20,7 +20,7 @@ function showPage(page) {
         - We can do yapping forever<br>
         - I can cook you rice every Monday (if there's a kitchen there. Infact you are  masterchef now, You can make me whatever you can)<br>
         - I can bless you with my lame jokes when you are sad, infact all the time😂<br>
-        - Plus, According to Uno Reverse Law Of Faltu Timepass, You don't have freedom of choice<br>
+        - Plus, According to Uno Reverse Law Of Timepass, You don't have freedom of choice<br>
       </div>
       <h2>Sooo… Just for the formality, are you in? 🫶</h2>
       <button class="btn" onclick="showPage(3)">Heck yes! 🎉</button>
@@ -51,7 +51,7 @@ function showPage(page) {
     `;
   } else if (page === 3) {
     container.innerHTML = `
-      <h2>YAYYY! You Got The Best Roomate, I am so happy (plus jealous) for you <3 <br><br>
+      <h2>YAYYY! You Got The Best Roomate, I am so happy for you <3 How Lucky! <br><br>
      </h2>
       <button class="btn" onclick="confetti()">Omg yessss! 😍🎊</button>
       <button class="btn no" onclick="showPage(99)">No, wait! 😢</button>
