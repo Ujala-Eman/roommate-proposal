@@ -145,6 +145,5 @@ document.head.appendChild(style);
 // Start with page 1
 showPage(1);
 
-// Make sure functions are globally accessible for inline onclick
 window.showPage = showPage;
 window.confetti = confetti;
